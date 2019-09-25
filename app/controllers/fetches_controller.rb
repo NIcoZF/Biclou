@@ -1,5 +1,6 @@
-class FetchesController < ApplicationController
+# frozen_string_literal: true
 
+class FetchesController < ApplicationController
   def index
     response = Faraday.get 'http://api.citybik.es/v2/networks/velib'
     @response = JSON.parse response.body, symbolize_names: true
