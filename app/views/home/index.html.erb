@@ -1,0 +1,8 @@
+Trouve ton biclou
+<%= @results%>
+
+<% @stations.each do |station| %><br />
+ <%= station.name%>
+ <%= station.free_bikes%>
+ <%= station.empty_slots%>
+<% end %>
