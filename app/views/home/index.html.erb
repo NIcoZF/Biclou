@@ -4,12 +4,21 @@ Trouve ton biclou
 <div id="mapid">
 </div>
 
-<% @stations.each do |station| %><br />
- <%= station.name%>
- <%= station.free_bikes%>
- <%= station.empty_slots%>
-<% end %>
+<table class="center">
+  <tr>
+    <th>Name</th>
+    <th>Free_bikes</th>
+    <th>Empty_slots</th>
+  </tr>
 
+  <% @stations.each do |station| %> 
+    <tr>
+      <td><%= station.name%> </td>
+      <td><%= station.free_bikes%> </td>
+      <td><%= station.empty_slots%> </td>
+    </tr>
+  <% end %>
+</table>
 
 <script>
 var mymap = L.map('mapid').setView([48.8564263, 2.35252757801161], 13);
