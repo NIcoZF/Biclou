@@ -1,0 +1,22 @@
+<div class="list">
+  <% if @stations == nil %>
+    <% elsif @stations.length != 0 %>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Free_bikes</th>
+          <th>Empty_slots</th>
+        </tr>
+
+        <% @stations.each do |station| %> 
+          <tr>
+            <td><%= station.name%> </td>
+            <td><%= station.free_bikes%> </td>
+            <td><%= station.empty_slots%> </td>
+          </tr>
+        <%end%>
+    </table>
+    <% else%>
+    Non de dieu
+  <% end %>
+</div>

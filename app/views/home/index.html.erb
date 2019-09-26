@@ -4,22 +4,18 @@ Trouve ton biclou
 <div id="mapid">
 </div>
 
-<table class="center">
-  <tr>
-    <th>Name</th>
-    <th>Free_bikes</th>
-    <th>Empty_slots</th>
-  </tr>
+<div class="center">
+<%= form_with(url: "/", method: "get") do %> <!-- by default remote:true -->
+  <%= label_tag(:place, "Search for:") %>
+  <%= text_field_tag(:place) %>
+  <%= submit_tag("Search") %>
+<% end %>
+</div>
 
-  <% @stations.each do |station| %> 
-    <tr>
-      <td><%= station.name%> </td>
-      <td><%= station.free_bikes%> </td>
-      <td><%= station.empty_slots%> </td>
-    </tr>
-  <% end %>
-</table>
+<%=render 'list'%>
 
+
+<!--Script from mapbox--> 
 <script>
 var mymap = L.map('mapid').setView([48.8564263, 2.35252757801161], 13);
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
