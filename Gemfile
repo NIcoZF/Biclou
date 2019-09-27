@@ -68,3 +68,4 @@ gem 'faraday'
 gem 'geocoder', '~> 1.5', '>= 1.5.1'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
+gem 'sidekiq', '~> 6.0'
