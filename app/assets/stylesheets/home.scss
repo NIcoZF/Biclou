@@ -6,17 +6,21 @@
 
 table, th, td {
   border: 1px solid black;
+  margin: 0 auto;
   }
 .center {
   position: absolute;
-  left: 0;
-  top: 50%;
+  margin: 0 auto;
+  top: 60%;
   width: 100%;
   text-align: center;
   font-size: 18px;
 }
 
 .list {
-  margin: 180px 300px 100px 500px;
+  position: absolute;
+  top: 70%;
+  width: 100%;
   text-align: center;
+  font-size: 18px;
 }

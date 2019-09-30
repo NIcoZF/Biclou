@@ -6,6 +6,8 @@ class HomeController < ApplicationController
 
       @place = params[:place]
       results = Geocoder.search(@place)
+      @latitude = results.first.coordinates[0]
+      @longitude = results.first.coordinates[1]
       @stations = Station.all.where("free_bikes != 0").near(results.first.coordinates, 5).take(5)
       respond_to do |format|
         format.html
@@ -13,7 +15,7 @@ class HomeController < ApplicationController
       end
     else
 
-      @stations == nil
+      @stations.nil?
     end
   end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UpdateStationsJob < ApplicationJob
   queue_as :default
 
@@ -12,6 +14,6 @@ class UpdateStationsJob < ApplicationJob
         empty_slots: station[:empty_slots],
         free_bikes: station[:free_bikes],
       )
-    end  
+    end
   end
 end
