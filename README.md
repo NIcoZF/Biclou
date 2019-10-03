@@ -1,6 +1,6 @@
 # Training app using third part API
 
-https://biclou.herokuapp.com/
+:bike: https://biclou.herokuapp.com/ :bike:
 
 _Find the closest velib station from the place you have typed in_
 
